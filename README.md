@@ -22,11 +22,11 @@ It would not be useful otherwise, but you are trading network and disk usage for
 I ran into deprecated code trying to get Rails 3 working so it is Rails 4 and up for now.
 
 ## Install
-    gem install acts_as_bloomfilter
+    <!-- gem install acts_as_bloomfilter -->
 
-or add this to your Gemfile
+add this to your Gemfile
 
-    gem 'acts_as_bloomfilter'
+    gem 'acts_as_bloomfilter' , git:  "https://github.com/lankford/acts_as_bloomfilter"
 
 then in your model add
 
