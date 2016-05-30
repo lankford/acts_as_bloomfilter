@@ -22,7 +22,6 @@ It would not be useful otherwise, but you are trading network and disk usage for
 I ran into deprecated code trying to get Rails 3 working so it is Rails 4 and up for now.
 
 ## Install
-    <!-- gem install acts_as_bloomfilter -->
 
 add this to your Gemfile
 
