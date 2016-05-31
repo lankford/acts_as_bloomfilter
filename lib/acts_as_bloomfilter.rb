@@ -1,5 +1,7 @@
 module ActsAsBloomfilter
 
+  require 'bloomfilter-rb'
+
   def self.included base
     base.extend(ClassMethods)
   end
