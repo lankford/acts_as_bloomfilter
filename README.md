@@ -63,6 +63,10 @@ This adds to your existing model based on the field name you are blooming for
 
     MyClass.myfieldname_bloom.delete 'some value'
 
+    MyClass.myfieldname_bloom.include? 'some value'
+
+    MyClass.myfieldname_bloom.stats
+
 ## Gotchas
 
 Records that are destroyed are automatically removed from the bloomfilter.
