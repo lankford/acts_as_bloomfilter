@@ -22,7 +22,9 @@ module ActsAsBloomfilter
 
         self.instance_eval <<~EVAL
           def #{arg}_bloom_load
-            #{self}.find_by_sql('SELECT #{arg} FROM #{self.table_name}').each { |record| #{arg}_bloom.insert record.#{arg} }
+            #{self}.find_by_sql('SELECT #{arg} FROM #{self.table_name}').each do |record|
+              #{arg}_bloom.insert record.#{arg}
+            end
             sleep 1 # Letting the filter settle out to prevent false negatives
           end
         EVAL
