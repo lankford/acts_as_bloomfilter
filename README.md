@@ -1,7 +1,5 @@
 # Active Bloom Filter
 
-This work is based on [Ilya Grigorik's](https://github.com/igrigorik) bloomfilter wrapper called   [bloomfilter-rb](https://github.com/igrigorik/bloomfilter-rb)
-
 ## BEWARE
 
 THIS WILL LOAD EVERY RECORD IN YOUR TABLE AND USE LOTS OF MEMORY !!!
@@ -12,7 +10,7 @@ It would not be useful otherwise, but you are trading network and disk usage for
 
 ## Features
 
-* Very fast way to know if something is PROBABLY in your database once the data is loaded.
+* Very fast way to know if something is MORE THAN LIKELY or ABSOLUTELY NOT in your database once the data is loaded.
 * Easy to use
 * Can bloomfilter on more than one column / field
 
@@ -61,6 +59,10 @@ This adds to your existing model based on the field name you are blooming for
 
     MyClass.myfieldname_bloom
 
+    MyClass.myfieldname_bloom.insert 'some value'
+
+    MyClass.myfieldname_bloom.delete 'some value'
+
 ## Gotchas
 
 Records that are destroyed are automatically removed from the bloomfilter.
@@ -70,3 +72,9 @@ Rails does not have a after_delete callback (coming in rails 5 I think) so those
 You can remove them with a call like this:
 
      myfieldname_bloom.delete myfieldname
+
+## Credits
+
+Tatsuya Mori [valdzone@gmail.com](mailto:valdzone@gmail.com) [(Original C implementation](http://vald.x0.com/sb/))
+
+This work is based on [Ilya Grigorik's](https://github.com/igrigorik) bloomfilter wrapper called   [bloomfilter-rb](https://github.com/igrigorik/bloomfilter-rb)
