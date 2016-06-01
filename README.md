@@ -21,7 +21,11 @@ I ran into deprecated code trying to get Rails 3 working so it is Rails 4 and up
 
 ## Install
 
-add this to your Gemfile
+You can install via
+
+    gem install acts_as_bloomfilter
+
+or add this to your Gemfile
 
     gem 'acts_as_bloomfilter' , git:  "https://github.com/lankford/acts_as_bloomfilter"
 
