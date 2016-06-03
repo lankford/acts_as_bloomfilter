@@ -1,4 +1,4 @@
-# Active Bloom Filter
+# Acts As Bloom Filter
 
 ## BEWARE
 
